@@ -25,7 +25,8 @@ def listLivingMarried(gedcom_name):
             # print(individuals['Name'][ind])
     return living_married
             
-# # listLivingMarried("testing.ged")
+# listLivingMarried("testing.ged")
+
 # '''testing'''
 # class Inneo_Tests_HW4(unittest.TestCase):
 #     def test1(self):

@@ -39,10 +39,10 @@ def siblingsAgeGap(gedcom_name):
                 for x in row2:
                     x_d = pd.to_datetime(list(individuals[individuals.ID == x].Birthday)[0])
                     if abs(int((main_d - x_d).days)) > 2 and abs(int((main_d - x_d).days)) < 240:
-                        print("Individuals ", main, " and ", x, " are invalid.")
+                        return("Individuals ", main, " and ", x, " are invalid.")
                         invalids+=1
     if invalids == 0:
-        print("All siblings are valid")
+        return("All siblings are valid")
 
 
 
