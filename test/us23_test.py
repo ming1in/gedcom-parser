@@ -4,6 +4,10 @@ Created on Mon Oct  5 14:29:04 2020
 
 @author: ptrda
 """
+
+# Peter Damianov
+# I pledge my Honor that I have abided by the Stevens Honor System
+
 import os
 import sys
 sys.path.append(os.path.abspath('../src'))
