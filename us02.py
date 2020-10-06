@@ -4,10 +4,6 @@ I pledge my honor that I've abided by the the Stevens Honor Code.
 '''
 import sys
 import os
-sys.path.append(os.path.abspath('../src/UserStories'))
-    #"c:\\Users\\Stevens User\\Documents\\GitHub\\Team-4-Code\\src")
-sys.path.append(os.path.abspath('../src/seeds'))
-    #"C:\\Users\\Stevens User\\Documents\\GitHub\\Team-4-Code\\seeds")
 import pandas as pd 
 import Project02
 from datetime import datetime
