@@ -4,9 +4,6 @@
     '''
 import datetime
 import unittest
-
-import sys
-sys.path.append("c:\\Users\\Stevens User\\555_Team_4\\Team-4-Code\\src")
 import Project02
 import pandas as pd
 
