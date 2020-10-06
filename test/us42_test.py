@@ -1,7 +1,7 @@
 import unittest
 import sys
 import os
-sys.path.append(os.path.abspath('../src/userstories'))
+sys.path.append(os.path.abspath('../src'))
 #imports us41 correctly as class
 from us42 import us42
  
