@@ -8,8 +8,6 @@ and the same marriage date should appear in a GEDCOM file
 '''
 
 from Gedcom import Gedcom, Family
-import sys
-import os
 
 def validFamily(family: Family):
   if (family.husband != '' and family.wife != '' and family.marriage != ''):

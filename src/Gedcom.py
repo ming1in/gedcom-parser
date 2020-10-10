@@ -146,7 +146,8 @@ class Gedcom:
                                 family[tags[record.tag]] = records[idx + 1].argument
                         # checks if Record is a child to the family
                         elif (record.tag == 'CHIL'):
-                            family['child'].append(record.argument)
+                            child = list(filter( lambda individual: individual.uid == record.argument, self.individuals))[0]
+                            family['child'].append(child)
                         else:
                             # store properties of the individual in temp variable family
                             family[tags[record.tag]] = record.argument
@@ -179,7 +180,7 @@ class Gedcom:
     def printFamilies(self):
         for family in self.families:
             print('----------------------------------------------------------------------')
-            print(family.uid + ' | ' + family.husband + ' | ' + family.wife + ' | ' + family.marriage)
+            print(family.uid + ' | ' + family.husband + ' | ' + family.wife + ' | ' + family.marriage + ' | ' + str(family.child))
 
         return
     def deleteFamily(self, deleteFamily: Family):
