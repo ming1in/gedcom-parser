@@ -10,7 +10,7 @@ from datetime import datetime
 import copy
 
 #this function is to determine if the marriage date is after the birth date
-def user02(gedcom_file):
+def us02(gedcom_file):
     individuals = Project02.createIndividualsDataFrame(gedcom_file)
     families = Project02.createFamiliesDataFrame(gedcom_file)
     indiv = copy.deepcopy(individuals[["Name", "Birthday"]]) #makes a copy of original inviduals dataframe
