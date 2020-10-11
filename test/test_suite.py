@@ -18,6 +18,7 @@ from us16_test import us16_test
 from us18_test import us18_test
 from us24_test import us24_test
 from us25_test import us25_test
+from us29_test import us29_test
 from us30_test import us30_test
 from us35_test import us35_test
 from us41_test import us41_test
@@ -27,8 +28,8 @@ from us42_test import us42_test
 tests = {
     us01_test, us07_test, us13_test,
     us16_test, us18_test, us24_test,
-    us25_test, us30_test, us35_test,
-    us41_test, us42_test
+    us25_test, us29_test, us30_test,
+    us35_test, us41_test, us42_test
 }
 
 test_suite = unittest.TestSuite()

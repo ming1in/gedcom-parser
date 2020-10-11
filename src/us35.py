@@ -6,8 +6,7 @@ User Story #35: List recent births
 List all people in a GEDCOM file who were 
 born in the last 30 days
 '''
-from Gedcom import Gedcom, Family
-from datetime import date, datetime, timedelta
+from Gedcom import Gedcom
 from us36 import last30days
 
 def us35(gedcomFile):
