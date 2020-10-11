@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath('../src'))
 os.chdir(os.path.abspath('../test/seeds'))
 import us03
 
-class TestUser03(unittest.TestCase):
+class Us03_test(unittest.TestCase):
     #one death is incorrect
     def test1(self):
         s = "The following have deaths before birth which is incorrect: ANGEL Florene "
