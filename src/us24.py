@@ -25,6 +25,7 @@ def us24(gedcomFile):
         if (validFamily(primaryFamily) and primaryFamily.uid not in deletedFamilyIds):
 
             for j, secondaryFamily in enumerate(gedcom.families):
+                
                 if (primaryFamily.uid == secondaryFamily.uid or not validFamily(secondaryFamily)):
                     continue
 
