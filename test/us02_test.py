@@ -6,7 +6,7 @@ os.chdir(os.path.abspath('../test/seeds'))
 import us02
 
 
-class Testuser02(unittest.TestCase):
+class Us02_test(unittest.TestCase):
     #all marriages after birth
 
     def test01(self):
