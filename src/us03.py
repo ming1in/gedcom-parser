@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath('../src/seeds'))
 import Project02
 
 #user03 checks to see if birth dates are before death dates.
-def user03(gedcom_file):
+def us03(gedcom_file):
     individuals = Project02.createIndividualsDataFrame(gedcom_file)
     indiv = copy.deepcopy(individuals[["Name", "Birthday", "Dead"]]) #makes a copy of original inviduals dataframe
     lst = ""
