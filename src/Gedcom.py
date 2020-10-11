@@ -63,7 +63,7 @@ class Gedcom:
         # open gedcom file
         gedcomFile = open(self.gedcomFile, "r")
         # temp var to hold instance of nested record array
-        record = [] 
+        record = []
 
         for line in gedcomFile:
             # construct line into array and clean up miscellaneous symbols
@@ -74,13 +74,13 @@ class Gedcom:
             if (recordArray[0] == '0'):
                 # check if there was a previous record being built
                 if (len(record) > 0):
-                    #adds previous record to gedcomArray and reset record for new records
+                    # adds previous record to gedcomArray and reset record for new records
                     self.gedcomArray.append(record)
                     record = []
-                
+
                 # check for useless level 0 line
                 if (recordArray[1] not in {'HEAD', 'TRLR', 'NOTE'}):
-                    #adds individual/family to record, so they can be built up
+                    # adds individual/family to record, so they can be built up
                     record.append(Record('0', recordArray[2], recordArray[1]))
 
             # checks for level 1/2 lines and if record is available to be built up, based on
@@ -111,7 +111,8 @@ class Gedcom:
                     if (record.tag in tags):
                         # checks if tag is a date type, in that case the argument is in the next Record
                         if (record.tag in {'BIRT', 'DEAT'}):
-                            individual[tags[record.tag]] = records[idx + 1].argument
+                            individual[tags[record.tag]
+                                       ] = records[idx + 1].argument
                         else:
                             # store properties of the individual in temp variable individual
                             individual[tags[record.tag]] = record.argument
@@ -143,11 +144,18 @@ class Gedcom:
                         # checks if tag is a date type, in that case the argument is in the next Record
                         if (record.tag in {'MARR', 'DIV'}):
                             if(records[idx + 1].tag == 'DATE'):
-                                family[tags[record.tag]] = records[idx + 1].argument
-                        # checks if Record is a child to the family
+                                family[tags[record.tag]
+                                       ] = records[idx + 1].argument
+                        # checks if Record is a child to the family, then find and set Individual
                         elif (record.tag == 'CHIL'):
-                            child = list(filter( lambda individual: individual.uid == record.argument, self.individuals))[0]
+                            child = list(filter(
+                                lambda individual: individual.uid == record.argument, self.individuals))[0]
                             family['child'].append(child)
+                        # checks if Record is for a spouse to the family, then find and set Individual
+                        elif (record.tag == 'HUSB' or record.tag == 'WIFE'):
+                            spouse = list(filter(
+                                lambda individual: individual.uid == record.argument, self.individuals))[0]
+                            family[tags[record.tag]] = spouse
                         else:
                             # store properties of the individual in temp variable family
                             family[tags[record.tag]] = record.argument
@@ -161,7 +169,8 @@ class Gedcom:
     # method that prints out every necessary line in the gedcom file
     def printGedcom(self):
         for records in self.gedcomArray:
-            print('----------------------------------------------------------------------')
+            print(
+                '----------------------------------------------------------------------')
             for record in records:
                 print(record.level + ' | ' +
                       record.tag + ' | ' + record.argument)
@@ -171,19 +180,25 @@ class Gedcom:
     # method that prints out every individual in Gedcom
     def printIndividuals(self):
         for individual in self.individuals:
-            print('----------------------------------------------------------------------')
-            print(individual.uid + ' | ' + individual.name + ' | ' + individual.sex + ' | ' + individual.birth)
+            print(
+                '----------------------------------------------------------------------')
+            print(individual.uid + ' | ' + individual.name +
+                  ' | ' + individual.sex + ' | ' + individual.birth)
 
         return
 
-    # method that prints out every family in Gedcom and 
+    # method that prints out every family in Gedcom and
     def printFamilies(self):
         for family in self.families:
-            print('----------------------------------------------------------------------')
-            print(family.uid + ' | ' + family.husband + ' | ' + family.wife + ' | ' + family.marriage + ' | ' + str(family.child))
+            print(
+                '----------------------------------------------------------------------')
+            print(family.uid + ' | ' + family.husband + ' | ' + family.wife +
+                  ' | ' + family.marriage + ' | ' + str(family.child))
 
         return
+
     def deleteFamily(self, deleteFamily: Family):
-        self.families = list(filter(lambda family: family.uid != deleteFamily.uid, self.families))
-        
-        return        
+        self.families = list(
+            filter(lambda family: family.uid != deleteFamily.uid, self.families))
+
+        return
