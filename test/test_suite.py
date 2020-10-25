@@ -12,7 +12,9 @@ ADD YOUR TEST FILES HERE
 FORMAT: from FILENAME import CLASSNAME
 '''
 from us01_test import us01_test
+from us04_test import us04_test
 from us07_test import us07_test
+from us10_test import us10_test
 from us13_test import us13_test
 from us16_test import us16_test
 from us18_test import us18_test
@@ -26,10 +28,11 @@ from us42_test import us42_test
 
 #**ADD YOUR TEST FILES HERE**
 tests = {
-    us01_test, us07_test, us13_test,
-    us16_test, us18_test, us24_test,
-    us25_test, us29_test, us30_test,
-    us35_test, us41_test, us42_test
+    us01_test, us04_test, us07_test, 
+    us10_test, us13_test, us16_test, 
+    us18_test, us24_test, us25_test, 
+    us29_test, us30_test, us35_test, 
+    us41_test, us42_test
 }
 
 test_suite = unittest.TestSuite()
