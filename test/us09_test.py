@@ -9,13 +9,13 @@ class us09_test(unittest.TestCase):
       result = ['I13']
       self.assertEqual(result, us09("seeds/us09/test1.ged"))
 
-    # def test2(self):
-    #   result = ['I2']
-    #   self.assertEqual(result, us09("seeds/us09/test2.ged"))
+    def test2(self):
+      result = ['I2']
+      self.assertEqual(result, us09("seeds/us09/test2.ged"))
 
-    # def test3(self):
-    #   result = ['I6']
-    #   self.assertEqual(result, us09("seeds/us09/test3.ged"))
+    def test3(self):
+      result = ['I6']
+      self.assertEqual(result, us09("seeds/us09/test3.ged"))
 
 
 if __name__ == '__main__':
