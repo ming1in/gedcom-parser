@@ -15,7 +15,7 @@ class us06_test(unittest.TestCase):
         self.assertEqual(s, us06.us06(filename))
     
     def test2(self):
-        filename = "test066.ged"
+        filename = "test061.ged"
         s = None
         self.assertEqual(s, us06.us06(filename))
 
