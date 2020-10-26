@@ -32,4 +32,3 @@ def us06(gedcom_file):
      if len(incorrect)>0:
         print("The following people have divorces after their death date" + str(incorrect))
 
-us06("test17.ged")
