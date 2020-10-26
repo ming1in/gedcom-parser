@@ -38,7 +38,7 @@ def us38 (gedcom_file):
     gedcom = Gedcom(gedcom_file)
     
     upcomingBDays = [individual.name for individual in gedcom.individuals 
-                     if (individual.birth != '' and upcomingDate(datetime.strftime(datetime.strptime(individual.birth, "%d %b %Y"), "%d %b")))]
+                     if (individual.birth != '' and upcomingDate(datetime.strftime(individual.birth, "%d %b")))]
     
     return upcomingBDays
 
