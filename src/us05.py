@@ -28,3 +28,4 @@ def us05(gedcom_file):
         print("The following people have marriage dates after death date: " + str(error))
 
 
+us05("test15.ged")
