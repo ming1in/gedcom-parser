@@ -17,8 +17,7 @@ def last30days(date):
     #SMELLY CODE FIX NO. 2: renamed variables so makes sense to reader
     today = datetime.today()
     older = today - timedelta(days=30)
-    curr = datetime.strptime(date, '%d %b %Y')
-    return older < curr < today
+    return older < date < today
 
 
 def us36(gedcomFile):
