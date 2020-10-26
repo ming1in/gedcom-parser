@@ -2,6 +2,7 @@
 Created on 10/08/20
 @author: Ming Lin
 '''
+from datetime import datetime
 
 tags = {
     'INDI': 'uid',
@@ -111,8 +112,8 @@ class Gedcom:
                     if (record.tag in tags):
                         # checks if tag is a date type, in that case the argument is in the next Record
                         if (record.tag in {'BIRT', 'DEAT'}):
-                            individual[tags[record.tag]
-                                       ] = records[idx + 1].argument
+                            individual[tags[record.tag]] = datetime.strptime(
+                                records[idx + 1].argument, '%d %b %Y')
                         else:
                             # store properties of the individual in temp variable individual
                             individual[tags[record.tag]] = record.argument
@@ -144,15 +145,15 @@ class Gedcom:
                         # checks if tag is a date type, in that case the argument is in the next Record
                         if (record.tag in {'MARR', 'DIV'}):
                             if(records[idx + 1].tag == 'DATE'):
-                                family[tags[record.tag]
-                                       ] = records[idx + 1].argument
+                                family[tags[record.tag]] = datetime.strptime(
+                                    records[idx + 1].argument, '%d %b %Y')
                         # checks if Record is a child to the family, then find and set Individual
                         elif (record.tag == 'CHIL'):
                             child = list(filter(
                                 lambda individual: individual.uid == record.argument, self.individuals))[0]
                             family['child'].append(child)
                         # checks if Record is for a spouse to the family, then find and set Individual
-                        elif (record.tag == 'HUSB' or record.tag == 'WIFE'):
+                        elif (record.tag in {'HUSB', 'WIFE'}):
                             spouse = list(filter(
                                 lambda individual: individual.uid == record.argument, self.individuals))[0]
                             family[tags[record.tag]] = spouse
@@ -197,7 +198,7 @@ class Gedcom:
 
         return
 
-    def deleteFamily(self, deleteFamily: Family):
+    def deleteFamily(self, deleteFamily):
         self.families = list(
             filter(lambda family: family.uid != deleteFamily.uid, self.families))
 
