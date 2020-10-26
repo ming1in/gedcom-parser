@@ -24,6 +24,8 @@ from us24_test import us24_test
 from us25_test import us25_test
 from us29_test import us29_test
 from us30_test import us30_test
+from us36_test import us36_test
+from us37_test import us37_test
 from us35_test import us35_test
 from us36_test import us36_test
 from us41_test import us41_test
@@ -47,6 +49,7 @@ tests = {
     us30_test, 
     us35_test,
     us36_test, 
+    us37_test,
     us41_test, 
     us42_test
 }
