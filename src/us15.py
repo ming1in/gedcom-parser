@@ -8,7 +8,6 @@ SSW555 - Sprint 2
 '''Goal: Make sure there are no more than 15 siblings per family'''
 
 from Gedcom import Gedcom, Family
-from datetime import date, datetime
 
 def us15(gedcomFile):
     gedcom = Gedcom(gedcomFile)
@@ -17,5 +16,3 @@ def us15(gedcomFile):
         if len(fam.child) > 15 :
             badFams.append(fam.uid)
     return badFams
-
-#print(us15("../test/seeds/seed.ged"))

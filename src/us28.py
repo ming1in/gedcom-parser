@@ -16,8 +16,8 @@ def sibList(fam):
     n = len(kidList) 
     for i in range(n-1): 
         for j in range(0, n-i-1): 
-            day1 = datetime.strptime(kidList[j].birth, '%d %b %Y')
-            day2 = datetime.strptime(kidList[j+1].birth, '%d %b %Y')
+            day1 =kidList[j].birth
+            day2 = kidList[j+1].birth
             if day1 < day2 : 
                 kidList[j], kidList[j+1] = kidList[j+1], kidList[j]
     order = []
