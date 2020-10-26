@@ -11,7 +11,7 @@ import os
 sys.path.append(os.path.abspath('../src'))
 from us38 import us38
 
-class us36_test(unittest.TestCase):
+class us38_test(unittest.TestCase):
     def test1(self):
       result = ['Evan Smith', 'Dylan Smith']
       self.assertEqual(result, us38("seeds/us38/TestA.ged"))
