@@ -6,7 +6,6 @@
 
 from Gedcom import Gedcom
 from datetime import datetime
-import os
 
 # In[ ]:
 
@@ -25,6 +24,3 @@ def us39 (gedcom_file):
                      if (family.marriage != '' and upcomingDate(datetime.strftime(datetime.strptime(family.marriage, "%d %b %Y"), "%d %b")))]
     
     return upcomingAnn
-
-u = us39(os.path.abspath('../test/seeds/us39/testC.ged'))
-print(u)
