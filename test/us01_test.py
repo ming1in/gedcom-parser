@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath('../src'))
 import us01
 
 # ----------------------------------- Test Cases for Use Case 07 -----------------------------------
-class usecase01_test(unittest.TestCase):
+class us01_test(unittest.TestCase):
     def test1(self):
         self.assertEqual(us01.usecase01("seeds/test8.ged"),'All dates are before today')
 

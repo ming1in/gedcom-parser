@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath('../src'))
 import us07
 
 # ----------------------------------- Test Cases for Use Case 41 -----------------------------------
-class usecase01_test(unittest.TestCase):
+class us07_test(unittest.TestCase):
     def test1(self):
             self.assertEqual(us07.usecase07("seeds/test8.ged"),"All ages are less than 150")
 
