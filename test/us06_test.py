@@ -10,12 +10,12 @@ import us06
 
 class us06_test(unittest.TestCase):
     def test1(self):
-        filename = "test17.ged"
+        filename = "us06/test1.ged"
         s = "The following people have divorces after their death date['DANIEL SOLLER']"
         self.assertEqual(s, us06.us06(filename))
     
     def test2(self):
-        filename = "test061.ged"
+        filename = "us06/test2.ged"
         s = None
         self.assertEqual(s, us06.us06(filename))
 
