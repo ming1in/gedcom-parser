@@ -25,7 +25,7 @@ class us46_test(unittest.TestCase):
 
     def test4(self):
         filename = "seeds/test3.ged" 
-        ret = []
+        ret = "No only children"
         self.assertEqual(us46.us46(filename),ret)
 
 

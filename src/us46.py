@@ -19,7 +19,10 @@ def us46(gedcom_name):
     onlyChildren = []
     for fam in gedcom.families:
         if(len(fam.child) == 1):
-            onlyChildren.append(sibList(fam))            
-    return onlyChildren
+            onlyChildren.append(sibList(fam))
+    if(len(onlyChildren) > 0):
+        return onlyChildren
+    else:
+        return('No only children')
     
     
