@@ -63,6 +63,7 @@ tests = {
     us35_test,
     us36_test,
     us37_test,
+    us39_test,
     us41_test,
     us42_test,
 }
