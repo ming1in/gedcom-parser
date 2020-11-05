@@ -32,6 +32,8 @@ from us04_test import us04_test
 from us03_test import us03_test
 from us02_test import us02_test
 from us01_test import us01_test
+from us27_test import us27_test
+from us31_test import us31_test
 
 ''' 
 ADD YOUR TEST FILES HERE 
@@ -66,6 +68,8 @@ tests = {
     us39_test,
     us41_test,
     us42_test,
+    us31_test,
+    us27_test,
 }
 
 test_suite = unittest.TestSuite()
