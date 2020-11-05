@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.abspath('../src'))
 from us37 import us37
 
-class us37test(unittest.TestCase):
+class us37_test(unittest.TestCase):
     def test1(self):
       result = ['Lucia Johnson', 'Michelle Jones', 'Lucia Johnson', 'Michelle Jones']
       self.assertEqual(result, us37("seeds/us37/test1.ged"))
