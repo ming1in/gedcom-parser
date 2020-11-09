@@ -8,7 +8,7 @@ import copy
 from datetime import datetime
 import pandas as pd 
 import Project02
-os.chdir(os.path.abspath('../test/seeds'))
+os.chdir(os.path.abspath('test/seeds'))
 #This function is used to determine if the Divorce date is after the Death date
 def us06(gedcom_file):
      individuals = Project02.createIndividualsDataFrame(gedcom_file)
@@ -26,5 +26,5 @@ def us06(gedcom_file):
                      incorrect.append(row["Wife Name"])
                      incorrect.append(row["Husband Name"])
      if len(incorrect)>0:
-        print("The following people have divorces after their death date" + str(incorrect))
+        return "The following people have divorces after their death date" , str(incorrect)
 
