@@ -35,14 +35,15 @@ from us36_test import us36_test
 from us41_test import us41_test
 from us42_test import us42_test
 
-
 # **ADD YOUR TEST FILES HERE**
 tests = {
-    us01_test, 
+    us01_test,
+    us02_test,
+    us03_test,
     us04_test,
     us07_test,
     us08_test,
-    #us09_test,
+    us09_test,
     us10_test,
     us13_test,
     us14_test, 
@@ -56,10 +57,13 @@ tests = {
     us29_test, 
     us30_test, 
     us35_test,
-    us36_test, 
+    us36_test,
     us37_test,
-    us41_test, 
-    us42_test
+    us39_test,
+    us41_test,
+    us42_test,
+    us31_test,
+    us27_test,
 }
 
 test_suite = unittest.TestSuite()
