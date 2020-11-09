@@ -78,7 +78,7 @@ tests = {
     #us40_test,
     us41_test, 
     us42_test,
-    us46_test
+    us46_test,
 }
 
 test_suite = unittest.TestSuite()
