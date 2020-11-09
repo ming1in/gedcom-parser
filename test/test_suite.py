@@ -21,9 +21,11 @@ from us09_test import us09_test
 from us10_test import us10_test
 from us11_test import us11_test
 from us13_test import us13_test
+from us14_test import us14_test
 from us15_test import us15_test
 from us16_test import us16_test
 from us18_test import us18_test
+from us19_test import us19_test
 from us24_test import us24_test
 from us25_test import us25_test
 from us28_test import us28_test
@@ -37,8 +39,6 @@ from us40_test import us40_test
 from us41_test import us41_test
 from us42_test import us42_test
 
-
-
 # **ADD YOUR TEST FILES HERE**
 tests = {
     us01_test, 
@@ -47,13 +47,15 @@ tests = {
     us06_test,
     us07_test,
     us08_test,
-    #us09_test,
+    us09_test,
     us10_test,
     us11_test,
     us13_test,
+    us14_test, 
     us15_test, 
     us16_test,
     us18_test, 
+    us19_test, 
     us24_test, 
     us25_test,
     us28_test,

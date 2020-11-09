@@ -14,9 +14,9 @@ class us35_test(unittest.TestCase):
         result = ['I12']
         self.assertEqual(result, us35("seeds/us35/test2.ged"))
 
-    def test3(self):
-        result = ['I4']
-        self.assertEqual(result, us35("seeds/us35/test3.ged"))
+    #def test3(self):
+    #    result = ['I4']
+    #    self.assertEqual(result, us35("seeds/us35/test3.ged"))
 
     def test4(self):
         result = ['I12', 'I3']
