@@ -9,26 +9,30 @@ and before 9 months after death of father
 from Gedcom import Gedcom, Family
 from datetime import datetime
 
+
 def us09(gedcomFile):
-  gedcom = Gedcom(gedcomFile)
+    gedcom = Gedcom(gedcomFile)
 
-  removedChildren =[]
+    removedChildren = []
 
-  for family in gedcom.families:
-    if (len(family.child) > 0):
-      remove = []
-      
-      for child in family.child:
-        if (family.wife.death and (child.birth > family.wife.death)):
-          remove.append(child)
-        if (family.husband.death and (child.birth - family.husband.death).days > 90):
-          remove.append(child)
-      
-      if (len(remove) > 0):
-          for child in remove:
-            removedChildren.append(child.uid)
-            family.child.remove(child)
+    for family in gedcom.families:
+        if (family.husband.death is '' or family.wife.death is ''):
+            continue
 
-  return removedChildren
+        if (len(family.child) > 0):
+            remove = []
 
-          
+            for child in family.child:
+                if (family.wife.death and (child.birth > family.wife.death)):
+                    remove.append(child)
+
+                family.husband.print()
+                if (family.husband.death and (child.birth - family.husband.death).days > 90):
+                    remove.append(child)
+
+            if (len(remove) > 0):
+                for child in remove:
+                    removedChildren.append(child.uid)
+                    family.child.remove(child)
+
+    return removedChildren
