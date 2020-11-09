@@ -2,6 +2,7 @@
 # Editors
 .vscode/
 .idea/
+*.cpython-38.pyc
 
 # Vagrant
 .vagrant/
