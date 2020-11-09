@@ -8,7 +8,7 @@ import os
 import pandas as pd
 from datetime import datetime
 import Project02
-os.chdir(os.path.abspath('../test/seeds'))
+os.chdir(os.path.abspath('test/seeds'))
 #checks to see if Marriage date is after death date
 def us05(gedcom_file):
     individuals = Project02.createIndividualsDataFrame(gedcom_file)
@@ -25,6 +25,6 @@ def us05(gedcom_file):
                     error.append(row['Husband Name'])
                     error.append(row["Wife Name"])
     if len(error)>0:
-        print("The following people have marriage dates after death date: " + str(error))
+        return "The following people have marriage dates after death date: " ,  str(error)
 
 
