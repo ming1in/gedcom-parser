@@ -35,26 +35,14 @@ def us22(gedcom_file):
     families = Project02.createFamiliesDataFrame(gedcom_file)
     individuals = Project02.createIndividualsDataFrame(gedcom_file)
     
-    invalid = []
+    dfs = [list(families.ID), list(individuals.ID)] 
     
-    for idx in range(len(families.ID)):
-        vfy = families.ID.drop([idx])
-        if families.ID[idx] in vfy:
-            invalid.append(families.ID[idx])
-    
-    for idx in range(len(individuals.ID)):
-        vfy = individuals.ID.drop([idx])
-        if individuals.ID[idx] in vfy:
-            invalid.append(individuals.ID[idx])
-    
-    return invalid
+    return (list(map(lambda lst: len(lst) != len(set(lst)), dfs)))
             
 
 if __name__ == '__main__':
     invalid = us22('seed.ged')
     print(invalid)
-
-
 # In[ ]:
 
 
