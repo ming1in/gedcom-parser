@@ -48,6 +48,10 @@ class Individual:
         self.isChildToFamId = isChildToFamId
         self.isSpouseToFamId = isSpouseToFamId
 
+    def print(self):
+        print("Id: % s, Name: % s, Sex: % s, Birth: %s, Death: %s, isChildToFamId: %s, isSpouseToFamId: %s " % (
+            self.uid, self.name, self.sex, self.birth, self.death, self.isChildToFamId, self.isSpouseToFamId))
+
 
 class Gedcom:
 
