@@ -14,16 +14,18 @@ from us43 import us43
 
 class us35_test(unittest.TestCase):
     def test1(self):
-        result = ['I10', 'I14', 'I17']
-        self.assertEqual(result, us43("seeds/testS31.ged"))
+        result = [('Paul Smith', 'Peter Smith'),
+                  ('Evan Smith', 'Matthew Smith'),
+                  ('Mark Jones', 'Michelle Jones')]
+        self.assertEqual(result, us43("seeds/us43/testS31.ged"))
 
     def test2(self):
-        result = ['I15', 'I16']
-        self.assertEqual(result, us43("seeds/testS32.ged"))
+        result = [('Macy MIGUEL', 'KATHERINE MIGUEL')]
+        self.assertEqual(result, us43("seeds/us43/testS32.ged"))
 
     def test3(self):
-        result = ['I17']
-        self.assertEqual(result, us43("seeds/testS33.ged"))
+        result = [('Sara Jones', 'Susan Jones')]
+        self.assertEqual(result, us43("seeds/us43/testS33.ged"))
 
 
 if __name__ == '__main__':
