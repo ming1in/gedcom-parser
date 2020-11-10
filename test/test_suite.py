@@ -32,6 +32,13 @@ from us04_test import us04_test
 from us03_test import us03_test
 from us02_test import us02_test
 from us01_test import us01_test
+<<<<<<< Updated upstream
+=======
+from us27_test import us27_test
+from us31_test import us31_test
+from us20_test import us20_test
+from us43_test import us43_test
+>>>>>>> Stashed changes
 
 ''' 
 ADD YOUR TEST FILES HERE 
@@ -53,6 +60,7 @@ tests = {
     us15_test,
     us16_test,
     us18_test,
+    us20_test,
     us22_test,
     us23_test,
     us24_test,
@@ -67,6 +75,12 @@ tests = {
     us39_test,
     us41_test,
     us42_test,
+<<<<<<< Updated upstream
+=======
+    us31_test,
+    us27_test,
+    us43_test,
+>>>>>>> Stashed changes
 }
 
 test_suite = unittest.TestSuite()
