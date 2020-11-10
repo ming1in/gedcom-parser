@@ -1,3 +1,12 @@
+'''
+Created on 10/06/20
+@author:   @arana23 - Aparajita Rana
+Pledge:    I pledge my honor to abide by the Stevens Honor System
+SSW555 - Testing Suite
+Goal: Run all tests for all completed User Stories
+'''
+import unittest
+
 ''' 
 ADD YOUR TEST FILES HERE 
 FORMAT: from FILENAME import CLASSNAME
