@@ -6,8 +6,6 @@ SSW555 - Sprint 3
 '''
 
 '''Goal: Make sure there are no more than 5 births at a time'''
-from Gedcom import Gedcom, Family
-
 def us14(gedcomFile):
     gedcom = Gedcom(gedcomFile)
     badFams = []

@@ -19,9 +19,10 @@ class us18_test(unittest.TestCase):
         self.assertEqual(s, us18.siblingsShouldNotMarry("seeds/test181.ged"))
 
     '''gedcom file with three sibling marriages'''
-    #def test2(self):
-    #    s = "The following individuals are marrying their siblings, which is not allowed: Claire Smith, Rachel Smith, Rick Smith, Cody Smith, James Smith, Jen Smith"
-    #    self.assertEqual(s, us18.siblingsShouldNotMarry("seeds/test182.ged"))
+    
+    def test2(self):
+        s = "The following individuals are marrying their siblings, which is not allowed: Claire Smith, Cody Smith, James Smith, Jen Smith, Rachel Smith, Rick Smith"
+        self.assertEqual(s, us18.siblingsShouldNotMarry("seeds/test182.ged"))
 
     '''gedcom file with no sibling marriages'''
     def test3(self):

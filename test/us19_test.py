@@ -3,14 +3,15 @@ import sys
 import os
 sys.path.append(os.path.abspath('../src'))
 from us19 import us19
+from Gedcom import Gedcom, Family
 
-class us14_test(unittest.TestCase):
+class us19_test(unittest.TestCase):
     def test1(self):
-      result = []
+      result = ['F1']
       self.assertEqual(result, us19("seeds/test1.ged"))
 
     def test2(self):
-      result = []
+      result = ['F2', 'F3', 'F4']
       self.assertEqual(result, us19("seeds/test2.ged"))
 
     def test3(self):
@@ -18,11 +19,11 @@ class us14_test(unittest.TestCase):
       self.assertEqual(result, us19("seeds/test3.ged"))
 
     def test4(self):
-      result = []
+      result = ['F2', 'F3', 'F4']
       self.assertEqual(result, us19("seeds/test5.ged"))
 
     def test5(self):
-      result = []
+      result = ['F1']
       self.assertEqual(result, us19("seeds/test6.ged"))
 
 if __name__ == '__main__':
