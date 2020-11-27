@@ -193,8 +193,8 @@ class Gedcom:
         for family in self.families:
             print(
                 '----------------------------------------------------------------------')
-            print(family.uid + ' | ' + family.husband + ' | ' + family.wife +
-                  ' | ' + family.marriage + ' | ' + str(family.child))
+            print(str(family.uid) + ' | ' + str(family.husband) + ' | ' + str(family.wife) +
+                  ' | ' + str(family.marriage) + ' | ' + str(family.child))
 
         return
 
