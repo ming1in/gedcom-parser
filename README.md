@@ -1,6 +1,6 @@
 # Gedcom Parser
 
-This initially began as a semester long team project project for my SWW555: Agile Methods of Development at Stevens Institute of Technology. We've worked to build out a scalable infrastructure to parse and organize GEDCOM, a standard format for genealogy data, that team members have been leaning on to build additional features. While appling Extreme Programming (XP) and Scrum methods in a small team that conducted weekly sprints with prioritized user stories that would be added to parser systems.
+The Gedcom Parser project initially began as a semester-long team project project for SWW555: Agile Methods of Development at Stevens Institute of Technology. We worked to build out a scalable infrastructure to parse and organize GEDCOM files (a standard format for genealogy data) Team members lean on these fundamentals to build additional features while appling Extreme Programming (XP) and Scrum methods. We conducted weekly sprints with prioritized user stories that would be added to parser systems.
 
 # Project Overview
 GEDCOM is a standard format for genealogy data developed by The Church of Jesus Christ of Latter-day Saints. GEDCOM identifies two major entities: individuals and families. GEDCOM allows you to describe the following characteristics of individuals:
