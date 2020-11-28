@@ -3,6 +3,7 @@ Created on 10/08/20
 @author: Ming Lin
 '''
 from datetime import datetime
+import copy
 
 tags = {
     'INDI': 'uid',
@@ -141,7 +142,7 @@ class Gedcom:
                     'marriage': '',
                     'divorce': ''
                 }
-
+                
                 # iterate through array of Records for the family's properties
                 for idx, record in enumerate(records):
                     # checks if tag is valid against tags dictionary
@@ -153,14 +154,17 @@ class Gedcom:
                                     records[idx + 1].argument, '%d %b %Y')
                         # checks if Record is a child to the family, then find and set Individual
                         elif (record.tag == 'CHIL'):
+                            family['child'].append(record.argument)
                             child = list(filter(
                                 lambda individual: individual.uid == record.argument, self.individuals))[0]
-                            family['child'].append(child)
+                            
                         # checks if Record is for a spouse to the family, then find and set Individual
                         elif (record.tag in {'HUSB', 'WIFE'}):
+                            #family[tags[record.tag]]=record.argument
                             spouse = list(filter(
                                 lambda individual: individual.uid == record.argument, self.individuals))[0]
                             family[tags[record.tag]] = spouse
+                            
                         else:
                             # store properties of the individual in temp variable family
                             family[tags[record.tag]] = record.argument
@@ -172,6 +176,11 @@ class Gedcom:
                 self.families.sort(key=lambda family: family.uid)
 
     # method that prints out every necessary line in the gedcom file
+    def GedcomFamilies(self):
+       for i in self.families:
+           print(str(i.uid) + '|' +  str(getattr(i, 'husband')) + '|' +  str(i.wife)+ '|' + str(i.child) + '|' + str(i.marriage) + '|' + str(i.divorce))
+
+            
     def printGedcom(self):
         for records in self.gedcomArray:
             print(
