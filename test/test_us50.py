@@ -13,8 +13,8 @@ import us50
 class us50_test(unittest.TestCase):
     def test1(self):
         filename = "seeds/test011.ged"
-        s = "F1 James Brown Felicia Brown"
-        self.assertEquals(s, us50.us50(filename))
+        s = "F3 Richard Jablowksi Brittany Hinker"
+        self.assertEqual(s, us50.us50(filename))
 
 if __name__ == '__main__':
     unittest.main()

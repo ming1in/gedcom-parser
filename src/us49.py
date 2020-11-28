@@ -13,9 +13,9 @@ def us49(gedcom_file):
     gedcom = Gedcom(gedcom_file)
     families = gedcom.families
     x = 0
-    for i in families:
-        for j in i.child:
-            if j.sex == 'M':
+    for fam in families:
+        for children in fam.child:
+            if children.sex == 'M':
                 x +=1
         if x == 0:
             return(i.uid + " " + i.husband.name + " "+ i.wife.name ) 
