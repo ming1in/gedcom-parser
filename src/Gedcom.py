@@ -187,8 +187,8 @@ class Gedcom:
         for individual in self.individuals:
             print(
                 '----------------------------------------------------------------------')
-            print(individual.uid + ' | ' + individual.name +
-                  ' | ' + individual.sex + ' | ' + individual.birth)
+            print(str(individual.uid) + ' | ' + str(individual.name) +
+                  ' | ' + str(individual.sex) + ' | ' + str(individual.birth))
 
         return
 
