@@ -4,6 +4,7 @@ This initially began as a semester long team project project for my SWW555: Agil
 
 # Project Overview
 GEDCOM is a standard format for genealogy data developed by The Church of Jesus Christ of Latter-day Saints. GEDCOM identifies two major entities: individuals and families. GEDCOM allows you to describe the following characteristics of individuals:
+
   •Unique individual ID
   •Name
   •Sex/Gender
@@ -13,6 +14,7 @@ GEDCOM is a standard format for genealogy data developed by The Church of Jesus 
   •Unique Family ID where the individual is a spouse
 
 Likewise, GEDCOM allows you to describe the following characteristics of a family:
+
   •Unique family ID•Unique individual ID of husband
   •Unique individual ID of wife
   •Unique individual ID of each child in the family
