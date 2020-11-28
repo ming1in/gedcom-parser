@@ -39,6 +39,14 @@ class Family:
 
 
 class Individual:
+    uid: str = None
+    name: str = None
+    sex: str = None
+    birth: datetime = None
+    death: datetime = None
+    isChildToFamId: str = None
+    isSpouseToFamId: str = None
+
     def __init__(self, uid, name, sex, birth, death, isChildToFamId, isSpouseToFamId):
         self.uid = uid
         self.name = name
@@ -135,8 +143,8 @@ class Gedcom:
                 # temp variable to hold properties of a family
                 family = {
                     'uid': '',
-                    'husband': '',
-                    'wife': '',
+                    'husband': Individual,
+                    'wife': Individual,
                     'child': [],
                     'marriage': '',
                     'divorce': ''
@@ -188,7 +196,7 @@ class Gedcom:
             print(
                 '----------------------------------------------------------------------')
             print(individual.uid + ' | ' + individual.name +
-                  ' | ' + individual.sex + ' | ' + individual.birth)
+                  ' | ' + individual.sex + ' | ' + str(individual.birth))
 
         return
 
