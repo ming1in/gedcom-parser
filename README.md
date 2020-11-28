@@ -91,3 +91,19 @@ python3 -m unittest
 This will proceed to run all tests based on the following naming convention: test_usXX.py
 
 # Credits
+
+The following were contributing team members:
+
+@ming1in
+
+@arana23
+
+@suzyshailesh
+
+@mmccree1
+
+@pdamiano-11
+
+@gracemiguel
+
+@samanthainneo99
