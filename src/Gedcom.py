@@ -192,13 +192,13 @@ class Gedcom:
 
         return
 
-    # method that prints out every family in Gedcom and
+    # method that prints out every family in Gedcom
     def printFamilies(self):
         for family in self.families:
             print(
                 '----------------------------------------------------------------------')
-            print(family.uid + ' | ' + family.husband + ' | ' + family.wife +
-                  ' | ' + family.marriage + ' | ' + str(family.child))
+            print(family.uid + ' | ' + family.husband.name + ' | ' + family.wife.name +
+                  ' | ' + str(family.marriage) + ' | ' + str(family.child))
 
         return
 
