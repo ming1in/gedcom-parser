@@ -21,6 +21,6 @@ def us39 (gedcom_file):
     gedcom = Gedcom(gedcom_file)
     
     upcomingAnn = [family.uid for family in gedcom.families 
-                     if (family.marriage != '' and upcomingDate(datetime.strftime(datetime.strptime(family.marriage, "%d %b %Y"), "%d %b")))]
+                     if (family.marriage != '' and upcomingDate(datetime.strftime(family.marriage, "%d %b")))]
     
     return upcomingAnn
