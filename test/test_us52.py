@@ -11,8 +11,8 @@ class us52_test(unittest.TestCase):
       self.assertEqual(result, us52("seeds/test1.ged"))
 
     def test2(self):
-      result = ['Rick Smith', 'Hannah Smith Smith']
-      self.assertEqual(result, us52("seeds/test11.ged"))
+      result = ['John Smith', 'Susan Jones','Bernard Smith', 'Theresa Kelly','Frank Jones','Emily Michaels','Kevin Brown', 'Diane Brown','Kevin Brown','Lucia Johnson']
+      self.assertEqual(result, us52("seeds/test12.ged"))
 
 if __name__ == '__main__':
     unittest.main()
