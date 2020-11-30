@@ -13,7 +13,7 @@ def us52(gedcomFile):
 
     gedcom = Gedcom(gedcomFile)
     for fam in gedcom.families:
-        if fam.husband != '' and fam.wife != '':
+        if fam.husband.name != None and fam.wife.name != None:
             couples.append(fam.husband.name)
             couples.append(fam.wife.name)
     
