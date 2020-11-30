@@ -18,7 +18,7 @@ def us49(gedcom_file):
             if children.sex == 'M':
                 x +=1
         if x == 0:
-            return(i.uid + " " + i.husband.name + " "+ i.wife.name ) 
+            return(fam.uid + " " + fam.husband.name + " "+ fam.wife.name ) 
         x=0
     
     
