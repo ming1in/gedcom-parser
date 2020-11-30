@@ -12,7 +12,7 @@ sys.path.append(os.path.abspath('../src'))
 from us43 import us43
 
 
-class us35_test(unittest.TestCase):
+class us43_test(unittest.TestCase):
     def test1(self):
         result = [('Paul Smith', 'Peter Smith'),
                   ('Evan Smith', 'Matthew Smith'),
