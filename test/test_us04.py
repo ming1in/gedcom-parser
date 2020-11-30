@@ -12,7 +12,7 @@ class us04_test(unittest.TestCase):
         self.assertEqual(us04.marriageBeforeDivorce(filename),ret)
 
     def test2(self):
-        filename = "seeds/test17.ged" 
+        filename = "seeds/us44/seed2.ged" 
         ret = "F2 is invalid."
         self.assertEqual(us04.marriageBeforeDivorce(filename),ret)
 
