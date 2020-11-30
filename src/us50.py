@@ -16,9 +16,8 @@ def us50(gedcom_file):
             if children.sex =='F':
                 x +=1
         if x == 0:
-            fam = []
-            fam.append(i.uid + " " + i.husband.name + " "+ i.wife.name)
+            fams = []
+            fams.append(fam.uid + " " + fam.husband.name + " "+ fam.wife.name)
         x=0
-    for i in fam:
-        return i
+    return fams
 
