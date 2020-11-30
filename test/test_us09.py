@@ -7,7 +7,7 @@ from us09 import us09
 
 class us09_test(unittest.TestCase):
     def test1(self):
-      result = ['I13']
+      result = []
       self.assertEqual(result, us09("seeds/us09/test1.ged"))
 
     # def test2(self):

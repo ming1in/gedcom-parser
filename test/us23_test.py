@@ -11,7 +11,6 @@ Created on Mon Oct  5 14:29:04 2020
 import os
 import sys
 sys.path.append(os.path.abspath('../src'))
-os.chdir(os.path.abspath('../test/seeds'))
 
 from us23 import us23
 import Project02
